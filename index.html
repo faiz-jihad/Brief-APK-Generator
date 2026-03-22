@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APKGen - Jasa Pembuatan Sistem APK Generator</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0f172a',
+                        cardBg: '#1e293b',
+                        brandAccent: '#3b82f6', // Blue
+                    }
+                }
+            }
+        }
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body class="bg-darkBg text-slate-300 font-sans antialiased">
+
+    <nav class="fixed w-full z-50 bg-darkBg/90 backdrop-blur-md border-b border-slate-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0 font-bold text-2xl text-white tracking-wider">
+                    APK<span class="text-brandAccent">Gen.</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="hover:text-white px-3 py-2 rounded-md text-sm font-medium transition">Beranda</a>
+                        <a href="#services" class="hover:text-white px-3 py-2 rounded-md text-sm font-medium transition">Paket</a>
+                        <a href="#booking" class="bg-brandAccent hover:bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium transition">Booking Sekarang</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="pt-32 pb-20 px-4 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
+                Bangun Sistem <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">APK Generator</span> Milikmu Sendiri
+            </h1>
+            <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto">
+                Solusi white-label untuk Agency & Software House. Buat ribuan aplikasi Android secara otomatis dengan sistem terintegrasi yang siap pakai.
+            </p>
+            <a href="#booking" class="inline-block bg-brandAccent hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-full shadow-lg shadow-blue-500/30 transition transform hover:-translate-y-1">
+                Mulai Konsultasi
+            </a>
+        </div>
+    </section>
+
+    <section id="services" class="py-20 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-white mb-12">Pilihan Paket Sistem</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-cardBg p-8 rounded-2xl border border-slate-700 hover:border-brandAccent transition">
+                    <h3 class="text-xl font-bold text-white mb-2">Web2App Basic</h3>
+                    <p class="text-slate-400 text-sm mb-6">Sistem generator sederhana merubah URL menjadi APK.</p>
+                    <div class="text-3xl font-bold text-white mb-6">Rp 3.5 Jt</div>
+                    <ul class="space-y-3 text-sm text-slate-300 mb-8">
+                        <li class="flex items-center">✓ 1 Template Webview</li>
+                        <li class="flex items-center">✓ Panel Admin Sederhana</li>
+                        <li class="flex items-center">✓ Output .APK</li>
+                    </ul>
+                </div>
+                <div class="bg-cardBg p-8 rounded-2xl border-2 border-brandAccent relative transform md:-translate-y-4">
+                    <div class="absolute top-0 right-0 bg-brandAccent text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-xl">POPULER</div>
+                    <h3 class="text-xl font-bold text-white mb-2">Pro Engine</h3>
+                    <p class="text-slate-400 text-sm mb-6">Sistem generator dinamis untuk kebutuhan bisnis klien.</p>
+                    <div class="text-3xl font-bold text-white mb-6">Rp 8.5 Jt</div>
+                    <ul class="space-y-3 text-sm text-slate-300 mb-8">
+                        <li class="flex items-center">✓ 3 Template Native/Webview</li>
+                        <li class="flex items-center">✓ Integrasi AdMob & Push Notif</li>
+                        <li class="flex items-center">✓ Output .APK & .AAB</li>
+                        <li class="flex items-center">✓ Dashboard Klien</li>
+                    </ul>
+                </div>
+                <div class="bg-cardBg p-8 rounded-2xl border border-slate-700 hover:border-brandAccent transition">
+                    <h3 class="text-xl font-bold text-white mb-2">Enterprise Plus</h3>
+                    <p class="text-slate-400 text-sm mb-6">Custom engine sepenuhnya dengan resource terpisah.</p>
+                    <div class="text-3xl font-bold text-white mb-6">Custom</div>
+                    <ul class="space-y-3 text-sm text-slate-300 mb-8">
+                        <li class="flex items-center">✓ Unlimited Template</li>
+                        <li class="flex items-center">✓ Multi-tenant Architecture</li>
+                        <li class="flex items-center">✓ Integrasi Payment Gateway</li>
+                        <li class="flex items-center">✓ API Ready</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking" class="py-20">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-cardBg p-8 md:p-12 rounded-3xl border border-slate-700 shadow-xl">
+                <h2 class="text-3xl font-bold text-white mb-2">Form Booking & Estimasi</h2>
+                <p class="text-slate-400 mb-8">Isi detail kebutuhan Anda. Sistem akan membuatkan PDF dan mengirimkannya ke faizalba74@gmail.com.</p>
+                
+                <form id="bookingForm" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-slate-300 mb-2">Nama Lengkap</label>
+                            <input type="text" id="inputNama" required class="w-full bg-slate-900 border border-slate-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brandAccent focus:ring-1 focus:ring-brandAccent transition">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-300 mb-2">Email / WhatsApp</label>
+                            <input type="text" id="inputKontak" required class="w-full bg-slate-900 border border-slate-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brandAccent focus:ring-1 focus:ring-brandAccent transition">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-slate-300 mb-2">Pilih Paket Sistem</label>
+                        <select id="paketPilihan" class="w-full bg-slate-900 border border-slate-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brandAccent focus:ring-1 focus:ring-brandAccent transition">
+                            <option value="3500000">Web2App Basic (Rp 3.500.000)</option>
+                            <option value="8500000" selected>Pro Engine (Rp 8.500.000)</option>
+                            <option value="0">Enterprise Plus (Custom Pricing)</option>
+                        </select>
+                    </div>
+
+                    <div class="p-6 bg-slate-900 rounded-xl border border-slate-700 flex flex-col sm:flex-row justify-between items-center gap-4">
+                        <div>
+                            <span class="block text-sm text-slate-400">Estimasi Biaya Awal</span>
+                            <span id="totalHarga" class="text-2xl font-bold text-brandAccent">Rp 8.500.000</span>
+                        </div>
+                        <button type="submit" id="btnSubmit" class="w-full sm:w-auto bg-brandAccent hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition flex items-center justify-center">
+                            Kirim Permintaan & PDF
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 py-8 border-t border-slate-800 text-center text-slate-500 text-sm">
+        <p>&copy; 2026 APKGen. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // 1. Inisialisasi EmailJS 
+        // GANTI INI DENGAN PUBLIC KEY DARI DASHBOARD EMAILJS KAMU NANTI
+        emailjs.init("PUBLIC_KEY_EMAILJS_KAMU"); 
+
+        const paketSelect = document.getElementById('paketPilihan');
+        const totalHargaDisplay = document.getElementById('totalHarga');
+        const form = document.getElementById('bookingForm');
+        const btnSubmit = document.getElementById('btnSubmit');
+
+        // Update harga dinamis saat pilihan paket diganti
+        paketSelect.addEventListener('change', function() {
+            const harga = parseInt(this.value);
+            if (harga === 0) {
+                totalHargaDisplay.textContent = 'Menunggu Diskusi';
+            } else {
+                totalHargaDisplay.textContent = 'Rp ' + harga.toLocaleString('id-ID');
+            }
+        });
+
+        // Handle saat form di-submit
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Ubah tampilan tombol saat loading
+            btnSubmit.textContent = 'Memproses PDF...';
+            btnSubmit.disabled = true;
+            btnSubmit.classList.add('opacity-50', 'cursor-not-allowed');
+
+            // Ambil data dari form
+            const nama = document.getElementById('inputNama').value;
+            const kontak = document.getElementById('inputKontak').value;
+            const paket = paketSelect.options[paketSelect.selectedIndex].text;
+            const estimasi = totalHargaDisplay.textContent;
+
+            // 2. Buat elemen HTML tersembunyi (Format PDF/Invoice)
+            const invoiceHTML = `
+                <div style="padding: 40px; font-family: Arial, sans-serif; color: #333; width: 600px;">
+                    <h2 style="color: #3b82f6; border-bottom: 2px solid #eee; padding-bottom: 10px;">Detail Booking APK Generator</h2>
+                    <div style="margin-top: 20px; line-height: 1.6;">
+                        <p><strong>Nama Lengkap:</strong> ${nama}</p>
+                        <p><strong>Kontak (Email/WA):</strong> ${kontak}</p>
+                        <p><strong>Paket Pilihan:</strong> ${paket}</p>
+                        <p><strong>Estimasi Biaya:</strong> <span style="color: #3b82f6; font-weight: bold; font-size: 18px;">${estimasi}</span></p>
+                    </div>
+                    <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; font-size: 12px; color: #666; text-align: center;">
+                        Dokumen ini dicetak otomatis dari website APKGen.
+                    </div>
+                </div>
+            `;
+
+            // Masukkan HTML ke dalam div virtual
+            const element = document.createElement('div');
+            element.innerHTML = invoiceHTML;
+
+            // 3. Konfigurasi html2pdf
+            const opt = {
+                margin:       0.5,
+                filename:     `Booking_${nama.replace(/\s+/g, '_')}.pdf`,
+                image:        { type: 'jpeg', quality: 0.98 },
+                html2canvas:  { scale: 2 },
+                jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+            };
+
+            try {
+                // Proses generate PDF menjadi bentuk Base64
+                const pdfData = await html2pdf().set(opt).from(element).outputPdf('datauristring');
+                
+                btnSubmit.textContent = 'Mengirim Email...';
+
+                // 4. Siapkan parameter untuk dikirim ke EmailJS
+                const templateParams = {
+                    to_email: 'faizalba74@gmail.com', // Tujuan email sesuai request
+                    from_name: nama,
+                    reply_to: kontak,
+                    paket_pesanan: paket,
+                    content: pdfData // File PDF dikirim sebagai attachment
+                };
+
+                // GANTI 'SERVICE_ID_KAMU' & 'TEMPLATE_ID_KAMU' DENGAN DATA DARI EMAILJS
+                await emailjs.send(
+                    'SERVICE_ID_KAMU', 
+                    'TEMPLATE_ID_KAMU', 
+                    templateParams
+                );
+
+                alert('Berhasil! Permintaan booking dan PDF telah dikirim ke faizalba74@gmail.com');
+                form.reset();
+                totalHargaDisplay.textContent = 'Rp 8.500.000'; // Reset harga ke default
+                paketSelect.value = "8500000";
+
+            } catch (error) {
+                console.error('Error memproses form:', error);
+                alert('Terjadi kesalahan saat membuat PDF atau mengirim email. Pastikan koneksi internet lancar dan pengaturan API benar.');
+            } finally {
+                // Kembalikan tombol ke keadaan semula
+                btnSubmit.textContent = 'Kirim Permintaan & PDF';
+                btnSubmit.disabled = false;
+                btnSubmit.classList.remove('opacity-50', 'cursor-not-allowed');
+            }
+        });
+    </script>
+</body>
+</html>
